@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Fraud Reporting Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>UPI Fraud Reporting Form</h1>
+        <form id="fraud-form">
+            <div class="row">
+                <div class="column">
+                    <label for="name">Name:</label>
+                    <select id="name" name="name" required>
+                        <option value="Select">Select</option>
+                        <option value="Emp-Drashti">Emp-Drashti</option>
+                        <option value="Emp-Sheetal">Emp-Sheetal</option>
+                        <option value="Emp-Sunena">Emp-Sunnana</option>
+                        <option value="INT-Mayank">INT-Mayank</option>
+                    </select>
+                </div>
+                <div class="column">
+                    <label for="date">Date of form:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="column">
+                    <label for="platform">Platform:</label>
+                    <select id="platform" name="platform" required>
+                        <option value="Select">Select</option>
+                        <option value="Consumercomplaintscourt">Consumercomplaintscourt</option>
+                        <option value="Twitter">Twitter</option>
+                        <option value="Cybercrimecomplaints">Cybercrimecomplaints</option>
+                        <option value="Nyaaya">Nyaaya</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Telegram">Telegram</option>
+                        <option value="Linkedin">Linkedin</option>
+                        <option value="Quora">Quora</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="column">
+                    <label for="post-url">Post url</label>
+                    <input type="url" id="post-url" name="post-url"placeholder="url" required>
+                </div>
+                <div class="column">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="Select">Select</option>
+                        <option value="Financial Fraud/Awareness">Financial Fraud/Awareness</option>
+                        <option value="Financial Fraud/Incomplete Details">Financial Fraud/Incomplete Details</option>
+                        <option value="Non-Financial Fraud/Awareness">Non-Financial Fraud/Awareness</option>
+                        <option value="UPI Fraud">UPI Fraud</option>
+                        <option value="Banking Fraud">Banking Fraud</option>
+                        <option value="Job Fraud">Job Fraud</option>
+                        <option value="OTP Fraud">OTP Fraud</option>
+                        <option value="Service Related">Service Related</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column post-description-column">
+                    <textarea type="text" id="post-description" name="post-description"placeholder= "post description"  required></textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column">
+                    <label for="handler">Handler:</label>
+                    <input type="text" id="handler" name="handler"placeholder="Handler" required>
+                </div>
+                <div class="column">
+                    <label for="account-no">Account No.:</label>
+                    <input type="number" id="account-no" name="account-no"placeholder="account number" required>
+                </div>
+                <div class="column">
+                    <label for="upi-id">UPI ID (sep. by comma):</label>
+                    <input type="text" id="upi-id" name="upi-id"placeholder="upi id" required pattern="^([a-zA-Z0-9.\-_]+@[a-zA-Z]{2,})(,\s*[a-zA-Z0-9.\-_]+@[a-zA-Z]{2,})*$" title="Enter UPI IDs separated by commas, each containing '@'">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column">
+                    <label for="phone">Phone Numbers (sep. by comma):</label>
+                    <input type="tel" id="phone" name="phone"placeholder="Phone number" required pattern="^(\d{10})(,\s*\d{10})*$" title="Enter multiple phone numbers separated by commas, each exactly 10 digits long.">
+                </div>
+                <div class="column">
+                    <label for="transaction-id">Transaction ID:</label>
+                    <input type="text" id="transaction-id" name="transaction-id"placeholder="transaction id" required>
+                </div>
+                <div class="column">
+                    <label for="date">Post Date:</label>
+                    <input type="date" id="date" name="date"placeholder="Post Date" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column">
+                    <label for="extra-1">Extra 1:</label>
+                    <input type="url" id="extra-1" name="extra-1">
+                </div>
+                <div class="column">
+                    <label for="extra-2">Extra 2:</label>
+                    <input type="text" id="extra-2" name="extra-2">
+                </div>
+                <div class="column">
+                    <label for="extra-3">Extra 3:</label>
+                    <input type="text" id="extra-3" name="extra-3">
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
